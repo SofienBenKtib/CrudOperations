@@ -43,7 +43,7 @@ namespace CrudOperations.Controllers
         }
 
         [HttpPost]
-        public async Task<ActionResult<Brand>> PostAdmin(Admin admin)
+        public async Task<ActionResult<Brand>> CreateAdmin(Admin admin)
         {
             _adminContext.Admins.Add(admin);
             await _adminContext.SaveChangesAsync();
