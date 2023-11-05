@@ -9,9 +9,9 @@ namespace CrudOperations.Controllers
     [ApiController]
     public class AdminController : ControllerBase
     {
-        private readonly AdminContext? _adminContext;
+        private readonly Models.ApplicationDbContext _adminContext;
 
-        public AdminController(AdminContext? adminContext)
+        public AdminController(Models.ApplicationDbContext adminContext)
         {
            _adminContext = adminContext;
         }
