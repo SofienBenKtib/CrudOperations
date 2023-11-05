@@ -9,9 +9,9 @@ namespace CrudOperations.Controllers
     [ApiController]
     public class AdminController : ControllerBase
     {
-        private readonly AdminContext? _adminContext;
+        private readonly Models.ApplicationDbContext _adminContext;
 
-        public AdminController(AdminContext? adminContext)
+        public AdminController(Models.ApplicationDbContext adminContext)
         {
            _adminContext = adminContext;
         }
@@ -43,7 +43,7 @@ namespace CrudOperations.Controllers
         }
 
         [HttpPost]
-        public async Task<ActionResult<Brand>> PostAdmin(Admin admin)
+        public async Task<ActionResult<Brand>> CreateAdmin(Admin admin)
         {
             _adminContext.Admins.Add(admin);
             await _adminContext.SaveChangesAsync();

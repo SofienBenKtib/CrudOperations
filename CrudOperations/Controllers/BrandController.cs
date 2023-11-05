@@ -9,9 +9,9 @@ namespace CrudOperations.Controllers
     [ApiController]
     public class BrandController : ControllerBase
     {
-        private readonly BrandContext? _brandContext;
+        private readonly Models.ApplicationDbContext _brandContext;
 
-        public BrandController(BrandContext? brandContext)
+        public BrandController(Models.ApplicationDbContext brandContext)
         {
             _brandContext = brandContext;
         }

@@ -4,8 +4,8 @@ using Microsoft.Extensions.Options;
 
 var builder = WebApplication.CreateBuilder(args);
 
-builder.Services.AddDbContext<BrandContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("BrandCS")));
-//builder.Services.AddDbContext<AdminContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("BrandCS")));
+builder.Services.AddDbContext<CrudOperations.Models.ApplicationDbContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("BrandCS")));
+
 // Add services to the container.
 
 builder.Services.AddControllers();
